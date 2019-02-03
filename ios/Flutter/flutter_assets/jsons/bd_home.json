@@ -1,0 +1,181 @@
+{
+  "message": "",
+  "success": true,
+  "page": 1,
+  "has_more": false,
+  "banners": [
+    "http://h0.hucdn.com/images/201905/93e22f35c06ef69e_750x300.jpg",
+    "http://h0.hucdn.com/images/201904/95e348e523fc2062_750x300.png",
+    "http://h0.hucdn.com/images/201905/f15756047337d1ad_750x300.jpg",
+    "http://h0.hucdn.com/images/201905/9a9c84076dbe6492_750x300.jpg",
+    "http://h0.hucdn.com/images/201905/65b81b1b9683641e_750x300.jpg",
+    "http://h0.hucdn.com/images/201905/11cf7635a0135c5c_750x300.jpg",
+    "http://h0.hucdn.com/images/201905/2b10de10387c870d_750x300.jpg",
+    "http://h0.hucdn.com/images/201904/3670a263763fabbe_750x300.jpg",
+    "http://h0.hucdn.com/images/201903/5d834c547a5ac7d7_750x300.jpg"
+  ],
+  "ads": [
+    {
+      "url": "http://h0.hucdn.com/images/201904/77b676a53b177408_225x120.png",
+      "title": "新人特惠"
+    },
+    {
+      "url": "http://h0.hucdn.com/images/201904/ac87646b238623a9_225x120.png",
+      "title": "新人特惠"
+    },
+    {
+      "url": "http://h0.hucdn.com/images/201904/2c826a5f76bdf7b7_225x120.png",
+      "title": "新人特惠"
+    },
+    {
+      "url": "http://h0.hucdn.com/images/201904/c5642c1ce20ecf99_225x120.png",
+      "title": "新人特惠"
+    },
+    {
+      "url": "http://h0.hucdn.com/images/201904/9b37d60452ecd63a_225x120.gif",
+      "title": "新人特惠"
+    }
+  ],
+  "hotspots_ad": {
+    "url": "http://h0.hucdn.com/images/201904/7383d5db1eafa042_750x454.gif",
+    "width": 750,
+    "height": 454
+  },
+  "block_ad": [
+    {
+      "title": "贝店超市",
+      "sub_title": "三种口味 家庭共享",
+      "items": [
+        {
+          "img": "http://d1.hucdn.com/upload/item/1806/26/09110625250850_800x800.jpg",
+          "price": "¥99"
+        },
+        {
+          "img": "http://d1.hucdn.com/upload/item/1809/13/20155667226100_800x800.jpg",
+          "price": "¥9.9"
+        }
+      ]
+    },
+    {
+      "title": "工厂优选",
+      "sub_title": "下单立减30元",
+      "items": [
+        {
+          "img": "http://d1.hucdn.com/upload/item/1901/31/06198456971431_800x800.jpg",
+          "price": "¥69.9"
+        },
+        {
+          "img": "http://d1.hucdn.com/upload/item/1901/04/94859286787528_800x800.jpg",
+          "price": "¥99.9"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "title": "【全棉面料 舒适保暖】顶瓜瓜童装 冬季新款儿童保暖内衣套装",
+      "desc": "冬季新款儿童保暖内衣套装",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1901/02/13837521665054_750x350.jpg"
+    },
+    {
+      "title": "【下单立减100】6斤~8斤重100%纯羊毛加厚保暖冬被",
+      "desc": "00%纯羊毛加厚保暖冬被",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1812/11/39890719327735_750x350.jpg"
+    },
+    {
+      "title": "【第二件 7.9元】山东五香萝卜干3斤装 传统材料腌制",
+      "desc": "卜干3斤装 传统材料腌制",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1901/24/16103830790348_750x350.jpg"
+    },
+    {
+      "title": "【领券 第二件9.9元】味出道全麦吐司手撕面包1kg 整箱早餐",
+      "desc": "手撕面包1kg 整箱早餐",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1901/27/78331090533226_750x350.jpg"
+    },
+    {
+      "title": "【领券立减5元】纳诺竹炭牙刷软毛成人家庭装 12支",
+      "desc": "刷软毛成人家庭装 12支",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1901/24/12797654965550_750x350.jpg"
+    },
+    {
+      "title": "【竹浆本色 湿水不易破】采琪采家庭装竹浆本色抽纸288张*27包",
+      "desc": "本色抽纸288张*27包",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1901/17/96451426515550_750x350.jpg"
+    },
+    {
+      "title": "【纯精肉手工香肠】正宗台湾热狗肠1.9千克 52根",
+      "desc": "热狗肠1.9千克 52根",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1801/02/88053730470348_750x350.jpg"
+    },
+    {
+      "title": "【舒适百搭爆款特卖】吧吖吧吖儿童校园小白鞋软底防滑板鞋",
+      "desc": "童校园小白鞋软底防滑板鞋",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1901/23/06654914140354_750x350.jpg"
+    },
+    {
+      "title": "【时尚两翻领羊毛衫】赛兔新款套头百搭纯羊毛衫毛衣",
+      "desc": "新款套头百搭纯羊毛衫毛衣",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1812/24/53881426371325_750x350.jpg"
+    },
+    {
+      "title": "【口感醇厚高端畅饮】高端畅饮伊利安慕希高端畅饮型希腊风味酸奶230gx10瓶*2箱10月产",
+      "desc": "gx10瓶*2箱10月产",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1809/20/38037995470348_750x350.jpg"
+    },
+    {
+      "title": "【调理肌肤 紧致美肌】后 津率享红华凝香水乳礼盒7件套",
+      "desc": "享红华凝香水乳礼盒7件套",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1805/18/34006610667221_750x350.jpg"
+    },
+    {
+      "title": "【酸甜可口 健康营养】广西百香果大果15枚 单果60g以上",
+      "desc": "果15枚 单果60g以上",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1901/03/18858301560348_750x350.jpg"
+    },
+    {
+      "title": "【排毒抗衰老 焕发新生】VOODOO 巫毒 黑瓶蛇毒免洗睡眠面膜",
+      "desc": "毒 黑瓶蛇毒免洗睡眠面膜",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1809/21/15415041657221_750x350.jpg"
+    },
+    {
+      "title": "【邂逅黄心果钟情猕猴桃】四川黄心猕猴桃20粒装单果90-120g",
+      "desc": "0粒装单果90-120g",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1809/09/73253731330348_750x350.jpg"
+    },
+    {
+      "title": "【针剂水库20片装】美迪惠尔水润保湿面膜 韩国进口",
+      "desc": "尔水润保湿面膜 韩国进口",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1805/28/12851043167221_750x350.jpg"
+    },
+    {
+      "title": "【细嫩多汁 色泽鲜艳】四川高山阳光脐橙9斤装金堂脐橙",
+      "desc": "山阳光脐橙9斤装金堂脐橙",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1901/21/58926525360348_750x350.jpg"
+    },
+    {
+      "title": "【夜间补水美肌】A.H.C B5睡眠面膜 100毫升",
+      "desc": "B5睡眠面膜 100毫升",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1809/20/51753100347221_750x350.jpg"
+    },
+    {
+      "title": "【7万人选择98%好评】美之扣多功能绞肉机宝宝辅食多功能料理机",
+      "desc": "肉机宝宝辅食多功能料理机",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1810/22/05270166346459_750x350.jpg"
+    },
+    {
+      "title": "【纯色高领 休闲毛衣】牧人鲨春季男士毛衣韩版针织衫潮流百搭",
+      "desc": "士毛衣韩版针织衫潮流百搭",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1901/29/44069823430707_750x350.jpg"
+    },
+    {
+      "title": "【多功能切菜器】美之扣厨房切菜神器家用刨丝器多功能切菜器",
+      "desc": "器家用刨丝器多功能切菜器",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1811/25/34368014940905_750x350.jpg"
+    },
+    {
+      "title": "【领券立减20】西贝乐 双杯双刀多功能家用料理机  SQ2119H",
+      "desc": "料理机  SQ2119H",
+      "rect_img": "http://d1.hucdn.com/upload/tuan/1809/29/04303191915354_750x350.jpg"
+    }
+  ]
+}
