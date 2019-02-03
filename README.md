@@ -8,7 +8,7 @@
 #### 1.首页
 
 
-![image](https://github.com/k373379320/Flutter_Beidian/001.png)!
+![image](https://github.com/k373379320/Flutter_Beidian/blob/master/001.png)!
 
 
 #### 2.社区
