@@ -19,7 +19,6 @@ class ZBSegmentView extends StatefulWidget {
 
 class _SegmentViewState extends State<ZBSegmentView> {
 //------------- property
-  int _currentIndex = 0;
   ListView _listView;
   ScrollController _scrollController = new ScrollController();
   List<SegmentViewItem> _items = [];
@@ -51,8 +50,6 @@ class _SegmentViewState extends State<ZBSegmentView> {
   }
 
   Widget _getContentView() {
-    this._currentIndex = widget.itemIndex;
-
     _listView = ListView.builder(
         controller: _scrollController,
         scrollDirection: Axis.horizontal,
@@ -60,11 +57,6 @@ class _SegmentViewState extends State<ZBSegmentView> {
         itemBuilder: (BuildContext context, int position) {
           return this._getItem(_items[position]);
         });
-
-    if (this._currentIndex == null) {
-      this._currentIndex = 0;
-    }
-    // setItemWithIdx(this._currentIndex);
 
     return Container(
       height: 41,
@@ -74,9 +66,13 @@ class _SegmentViewState extends State<ZBSegmentView> {
   }
 
   Widget _getItem(SegmentViewItem item) {
-    Color color = item.index == this._currentIndex
-        ? widget.seletedColor
-        : widget.defaultColor;
+    Color color;    
+    if (item.index == widget.itemIndex) {
+      color = widget.seletedColor;
+      this.setItemWithIdx(widget.itemIndex);
+    } else {
+      color = widget.defaultColor;
+    }
 
     return GestureDetector(
       child: Container(
@@ -90,15 +86,14 @@ class _SegmentViewState extends State<ZBSegmentView> {
             style: TextStyle(
                 color: color, fontSize: 14, fontWeight: FontWeight.w700),
           )),
-      onTapUp: (TapUpDetails details) {
-        this._handleTap(item, details);
+      onTap: () {
+        this._handleTap(item);
       },
     );
   }
 
-  void _handleTap(SegmentViewItem item, TapUpDetails details) {
+  void _handleTap(SegmentViewItem item) {
     setState(() {
-      this._currentIndex = item.index;
       setItemWithIdx(item.index);
       widget.onItemChange(item);
     });
@@ -109,9 +104,6 @@ class _SegmentViewState extends State<ZBSegmentView> {
       index = 0;
     }
     if (_listView.controller != null) {
-      // RenderBox getBox = context.findRenderObject();
-      // var local = getBox.globalToLocal(details.globalPosition);
-
       double itemWidt = 56.0 + 22; //TODO: 这个宽度可以动态化
       double contentSizeW = widget.titles.length * itemWidt;
       double currentOffset = 0;
@@ -125,10 +117,8 @@ class _SegmentViewState extends State<ZBSegmentView> {
           double v = contentSizeW - viewWidth;
           currentOffset = targetItemLeft - v > 0 ? v : targetItemLeft;
         }
-        if (_listView.controller.positions.isNotEmpty) {
-          _listView.controller.animateTo(currentOffset,
-              duration: kAnimateTime, curve: Curves.easeInOut);
-        }
+        _listView.controller.animateTo(currentOffset,
+            duration: kAnimateTime, curve: Curves.easeInOut);
       }
     }
   }

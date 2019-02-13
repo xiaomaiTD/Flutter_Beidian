@@ -34,7 +34,7 @@ getProductBlock(String title, String subTitle, List info) {
         Row(
           children: <Widget>[
             //title
-            Container(
+            Container(              
                 margin: EdgeInsets.only(top: 10, left: 12),
                 alignment: Alignment.centerLeft,
                 height: 28,

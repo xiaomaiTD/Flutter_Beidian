@@ -2,6 +2,8 @@ export 'package:flutter/material.dart';
 
 export 'GlobalColor.dart';
 export 'GlobalString.dart';
+export 'BDRequest.dart';
+
 
 export 'package:zbflutter/ZBUitilty/real_rich_text.dart';
 export 'package:zbflutter/ZBUitilty/ZBNetwork.dart';

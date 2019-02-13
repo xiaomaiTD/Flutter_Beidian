@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:zbflutter/Global/ZBGlobalHeader.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:zbflutter/ZBUIKit/Items.dart';
@@ -48,13 +47,13 @@ class _MyHomeAppState extends State<MyHomeApp> {
     "贝店周边"
   ];
   PageController _pageController = PageController();
-  int topSegmentViewItemIndex;
+  int topSegmentViewItemIndex = 0;
 
 //------------- life cycle
   @override
   void initState() {
-    this.loadLocalDataWithFile("jsons/bd_home.json", this.datas);
-    this.loadLocalDataWithFile("jsons/bd_home_sub.json", this.subDatas);
+    this.featchHomePageData(kHomePageRequest, this.datas);
+    this.featchHomePageData(kHomeSubPageRequest, this.subDatas);
     super.initState();
   }
 
@@ -69,6 +68,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
       _pageController.animateToPage(item.index,
           duration: kAnimateTime, curve: Curves.easeInOut);
     }
+    this.topSegmentViewItemIndex = item.index;
   }
 
   _pageControllerPageChanged(int index) {
@@ -121,47 +121,49 @@ class _MyHomeAppState extends State<MyHomeApp> {
     return content;
   }
 
-  loadLocalDataWithFile(String fileName, List data) {
-    Future<String> mainDataString =
-        DefaultAssetBundle.of(context).loadString(fileName);
-
-    mainDataString.then((String value) {
-      setState(() {
-        var jsonData = json.decode(value);
-        if (jsonData["banners"] != null) {
-          List banners = jsonData["banners"];
-          if (banners.length > 0) {
-            data.add(BDBaseCellModel("banners", banners));
+  featchHomePageData(String requestURLStr, List data) async {
+    try {
+      Future.wait([ZBNetwork.sendRequestGet(requestURLStr)])
+          .then((dynamic result) {
+        setState(() {
+          var jsonData = result[0];
+          if (jsonData["banners"] != null) {
+            List banners = jsonData["banners"];
+            if (banners.length > 0) {
+              data.add(BDBaseCellModel("banners", banners));
+            }
           }
-        }
-        if (jsonData["ads"] != null) {
-          List ads = jsonData["ads"];
-          if (ads.length > 0) {
-            data.add(BDBaseCellModel("ads", ads));
+          if (jsonData["ads"] != null) {
+            List ads = jsonData["ads"];
+            if (ads.length > 0) {
+              data.add(BDBaseCellModel("ads", ads));
+            }
           }
-        }
-        if (jsonData["hotspots_ad"] != null) {
-          data.add(BDBaseCellModel("hotspots_ad", jsonData["hotspots_ad"]));
-          data.add(BDBaseCellModel("space", 8.0));
-        }
-        if (jsonData["block_ad"] != null) {
-          List blockData = jsonData["block_ad"];
-          if (blockData.length == 2) {
-            data.add(BDBaseCellModel("block_ad", blockData));
+          if (jsonData["hotspots_ad"] != null) {
+            data.add(BDBaseCellModel("hotspots_ad", jsonData["hotspots_ad"]));
             data.add(BDBaseCellModel("space", 8.0));
           }
+          if (jsonData["block_ad"] != null) {
+            List blockData = jsonData["block_ad"];
+            if (blockData.length == 2) {
+              data.add(BDBaseCellModel("block_ad", blockData));
+              data.add(BDBaseCellModel("space", 8.0));
+            }
 
-          data.add(BDBaseCellModel("time", null));
-        }
-
-        List items = jsonData['items'];
-        if (items.length > 0) {
-          for (var item in items) {
-            data.add(BDBaseCellModel("product", item));
+            data.add(BDBaseCellModel("time", null));
           }
-        }
+
+          List items = jsonData['items'];
+          if (items.length > 0) {
+            for (var item in items) {
+              data.add(BDBaseCellModel("product", item));
+            }
+          }
+        });
       });
-    });
+    } catch (e) {
+      return print(e);
+    }
   }
 
   getListViewItemForItem(var subject) {
@@ -170,7 +172,7 @@ class _MyHomeAppState extends State<MyHomeApp> {
       return BDCells.spaceCell(cellModel.data, BDColor.spaceColor);
     }
     if (cellModel.identifier == "banners") {
-      return BDCells.bannerCell(cellModel.data, 166, 750 / 300, context);
+      return BDCells.bannerCell(cellModel.data, 300, 750 / 300, context);
     }
     if (cellModel.identifier == "ads") {
       return BDCells.blockCell(cellModel.data, context);

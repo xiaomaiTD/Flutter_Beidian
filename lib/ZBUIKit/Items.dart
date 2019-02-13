@@ -56,10 +56,10 @@ class BDCells {
       color: Colors.white,
       child: new BannerView(
         data: urls,
-        height: height,
+        height: ZBDevice.scaleHeight(height, context),
         buildShowView: (index, data) {
           return new Container(
-              height: ZBDevice.scaleHeight(300, context),
+              height: ZBDevice.scaleHeight(height, context),
               color: Colors.black,
               child: new AspectRatio(
                 aspectRatio: aspecRatio,
